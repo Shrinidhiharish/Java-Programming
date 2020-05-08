@@ -4,15 +4,15 @@ public class Palindrome {
 
 	public static void isPalindrome(int num) {
 		int reminder = 0;
-		int sum = 0;
+		int rev = 0;
 		int orig;
 		orig = num;
 		while (num > 0) {
 			reminder = num % 10;
-			sum = (sum * 10) + reminder;
+			rev = (rev * 10) + reminder;
 			num = num / 10;
 		}
-		if (orig == sum) {
+		if (orig == rev) {
 			System.out.println("palindrome");
 		} else {
 			System.out.println("not a palindrome");
